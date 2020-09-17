@@ -1,0 +1,33 @@
+In vim you must be able to quickly clean a file.
+
+Example excercise:
+    open vim with a new document
+    then do: :r!ps auxww
+    now the document is full of processes on the computer and the cursor is at the end of the document
+    go to the top of the document (gg is easiest, :0 works as well)
+    go down a couple of lines until your cursor is on the USER PID ... header line
+    now remove all of the unneded header information at the top of the document: dgg (delete to beginning of document)
+    now lets filter the document for all non-root user processes
+    go to the top of docuemnt: gg
+    use visual mode: v
+    go to end of document: G
+    now all of document is "highlighted"
+    now simply do: :!grep -v \^root
+    now the document has all non-root processes
+    now lets sort all of the processes by PID in reverse order
+    highlight the document again in visual mode: ggvG
+    then filter: :!sort -nk 2 -r
+    now the document is sorted by the second "key" which is PID column, numerically, in reverse order
+    now lets sort/group by username
+    highlight all of the document: ggvG
+    then filter: :!sort -k 1
+
+Example excercise visual block:
+    open up vim in new window in this directory
+    do this: :r!grep . *
+    now you can clean up the filenames on the left by doing
+    use block visual mode: ^v
+    move around and delete the filenames by highighting up to the colon
+    and the hit d
+
+

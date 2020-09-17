@@ -1,0 +1,31 @@
+There are MANY vim settings.
+
+This is mine.
+
+let loaded_matchparen = 1
+set nocompatible
+set modeline
+" Optional, but I like it
+set ts=4
+" Optional, but I like it
+set sw=4
+set et
+set showmatch
+set ai
+set nrformats-=octal
+set hlsearch
+
+I see modeline as a must have as options for formating can be
+added to the file and then everyone can have the same options.
+The biggest things to have there are ts sw et ai as different
+languages have different formatting options.
+
+For example, go uses tabs and not spaces for indentation.
+Python is the opposite.
+
+go has go fmt and that "just works" and is not worth debate.
+python is not that advanced yet, so we have to rely on
+adherance to pep8 or modifications of it.
+
+C and C++ are free for alls.  Everyone has thier own opinion
+on style and formatting.

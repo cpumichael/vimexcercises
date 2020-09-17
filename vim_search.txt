@@ -1,0 +1,40 @@
+More Latin text below.  To search for ipsum, do /ipsum and hit return, to move
+to the next ipsum, do n to move to the previous ipsum do N
+
+------------------------------------------------------------------------------
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit ut purus ut consequat. Quisque fermentum mauris vel lacus ul
+Ut varius id mi nec cursus. Maecenas sollicitudin leo erat, a varius lectus maximus ut. Proin volutpat, nunc at cursus tincidunt, ipsum lib
+Suspendisse vitae mattis velit. Aenean at orci sit amet eros auctor luctus. Donec vulputate ultrices aliquam. In iaculis eros vitae fringil
+Nullam a orci porttitor, vehicula tellus et, pellentesque mi. Nulla quis quam ultrices, tempus elit et, condimentum odio. Vestibulum non ef
+Aliquam erat volutpat. Vivamus ac nulla felis. In sit amet tortor arcu. Nullam pretium, est sit amet fringilla commodo, est elit pulvinar m
+
+------------------------------------------------------------------------------
+
+Now move up to the first word in the previous paragraph "Aliquam", then hit *
+What this does is quickly selects the next word under the cursor, and then
+can use n and N to move around.
+Vim is case sensitive by default for searches this can be toggled by setting
+:set ignorecase or :setsmartcase
+smartcase defaults to insensitive but goes sensitive with an upper character.
+Also, /\csearch_term  will make search_term search case iNseNsiTive
+Search this document for sensitive in case insensitive ways.
+
+------------------------------------------------------------------------------
+
+:%s/search/replace/g
+Does the whole document
+using visual mode is great for limited searches, just highlight in visual mode
+and do s/search/replace/g
+In the second paragraph below, the on that begins with "Ut varius".  replace
+all instances of cursus with ASML.
+Now search for cursus and there should only be mention of it here and in the
+4th paragraph.
+
+------------------------------------------------------------------------------
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit ut purus ut consequat. Quisque fermentum mauris vel lacus ul
+Ut varius id mi nec cursus. Maecenas sollicitudin leo erat, a varius lectus maximus ut. Proin volutpat, nunc at cursus tincidunt, ipsum lib
+Suspendisse vitae mattis velit. Aenean at orci sit amet eros auctor luctus. Donec vulputate ultrices aliquam. In iaculis eros vitae fringil
+Nullam a orci porttitor, vehicula tellus et, pellentesque mi. Nulla quis quam ultrices, tempus elit et, condimentum odio. Vestibulum non ef
+Aliquam erat volutpat. Vivamus ac nulla felis. In sit amet tortor arcu. Nullam pretium, est sit amet fringilla commodo, est elit pulvinar m
