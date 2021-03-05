@@ -27,5 +27,5 @@ go has go fmt and that "just works" and is not worth debate.
 python is not that advanced yet, so we have to rely on
 adherance to pep8 or modifications of it.
 
-C and C++ are free for alls.  Everyone has thier own opinion
+C and C++ are free for alls. Everyone has thier own opinion
 on style and formatting.
