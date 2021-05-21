@@ -3,19 +3,15 @@ Open this document.
 Below is some Latin text with long lines.
 
 vim has "g" commands, j and k move down an up, gj and gk move down and up by screen.
-Now try the difference between j k and gj  and gk.  There is also g0 and g$, experiment
+Now try the difference between j k and gj and gk. There is also g0 and g$, experiment
 with those as well.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit ut purus ut consequat. Quisque fermentum mauris vel lacus ul
-Ut varius id mi nec cursus. Maecenas sollicitudin leo erat, a varius lectus maximus ut. Proin volutpat, nunc at cursus tincidunt, ipsum lib
-Suspendisse vitae mattis velit. Aenean at orci sit amet eros auctor luctus. Donec vulputate ultrices aliquam. In iaculis eros vitae fringil
-Nullam a orci porttitor, vehicula tellus et, pellentesque mi. Nulla quis quam ultrices, tempus elit et, condimentum odio. Vestibulum non ef
-Aliquam erat volutpat. Vivamus ac nulla felis. In sit amet tortor arcu. Nullam pretium, est sit amet fringilla commodo, est elit pulvinar m
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit ut purus ut consequat. Quisque fermentum mauris vel lacus ul Ut varius id mi nec cursus. Maecenas sollicitudin leo erat, a varius lectus maximus ut. Proin volutpat, nunc at cursus tincidunt, ipsum lib Suspendisse vitae mattis velit. Aenean at orci sit amet eros auctor luctus. Donec vulputate ultrices aliquam. In iaculis eros vitae fringil Nullam a orci porttitor, vehicula tellus et, pellentesque mi. Nulla quis quam ultrices, tempus elit et, condimentum odio. Vestibulum non ef Aliquam erat volutpat. Vivamus ac nulla felis. In sit amet tortor arcu. Nullam pretium, est sit amet fringilla commodo, est elit pulvinar m
 
 -------------------------------------------------------------------------------
 
-The key motion characters are jklh, wW bB, 0$.  W goes by space deliminated "words" w goes by
-non-alphanumeric delimiated "words".  b and B go backwards words.  There is also ^f and ^b
+The key motion characters are jklh, wW bB, 0$. W goes by space deliminated "words" w goes by
+non-alphanumeric delimiated "words". b and B go backwards words. There is also ^f and ^b
 control+f/control+b to move forward by a screen page at a time (like pageup/page down).
 Experiment with the difference between w, W, b, and B on the following line:
 lines1 = [[[2, 0], [1, 2], [1, 3]]]
@@ -30,9 +26,9 @@ Sample line with an deleteme word right in the middle.
 Now use u to undo the last change, you can do that here, and the cursor will
 be moved to where deleteme was.
 D deletes from cursor to the end of line, d0 deletes from cursor to beginning
-of line.  dj deletes current line and line below, always remember that u undoes
+of line. dj deletes current line and line below, always remember that u undoes
 the previous thing you just did, and U restores the current line with multiple
-edits. ^r "redoes" an undo.  Try that now.  dd deletes current line, and
+edits. ^r "redoes" an undo. Try that now. dd deletes current line, and
 all commands can be prefixed with a number to do the next command any number
 of times, so 5dd will delete 5 lines.
 c is like d, but it is for "change" which does the delete part, and then puts
@@ -41,7 +37,7 @@ the editor in insert mode.
 -------------------------------------------------------------------------------
 
 t and f move to the next character, which is great to be combined with _.-['
-and so on with programming.  This is best when combined with d and c
+and so on with programming. This is best when combined with d and c
 For example to change all of the quoted text to something else just move to
 the right of the first ' then do ct' :
 plt.title('This text in here needs to be replaced!')
@@ -56,7 +52,7 @@ def my_great_function(this_variable=None, verbose=False):
 
 always remember that visual mode can be used at any time, and visual mode
 is great because you can use motion to highlight what you want, and then
-do an action from there.  So to change the title on a multiline text area
+do an action from there. So to change the title on a multiline text area
 like below, do:
 plt.title('This text in here needs to be replaced!'
           'and this is a multiline area of text'
@@ -64,6 +60,21 @@ plt.title('This text in here needs to be replaced!'
           'now')
 Go to the first T in This at the beginning, then switch to v for visual
 mode, then move to the now at the end of the title, and then do c to
-change all of the highlighted text.  Remember that u can undo, and ^r
+change all of the highlighted text. Remember that u can undo, and ^r
 can redo.
+
+-------------------------------------------------------------------------------
+
+visual mode can also select via a block with control+v
+go to the first # and hit control+v and use jl to select the '# '
+and then d to uncomment the lines below.
+remember if you want to stop selection just hit ESC
+
+def foo(bar):
+    print('xyx')
+
+def baz(bam):
+    print('bam')
+
+
 

@@ -1,4 +1,4 @@
-More Latin text below.  To search for ipsum, do /ipsum and hit return, to move
+More Latin text below. To search for ipsum, do /ipsum and hit return, to move
 to the next ipsum, do n to move to the previous ipsum do N
 
 ------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ Search this document for sensitive in case insensitive ways.
 Does the whole document
 using visual mode is great for limited searches, just highlight in visual mode
 and do s/search/replace/g
-In the second paragraph below, the on that begins with "Ut varius".  replace
+In the second paragraph below, the on that begins with "Ut varius". replace
 all instances of cursus with ASML.
 Now search for cursus and there should only be mention of it here and in the
 4th paragraph.
